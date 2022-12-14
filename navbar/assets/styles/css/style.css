@@ -129,6 +129,68 @@ table {
   grid-column: 3/4;
 }
 
+.navbarfix {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+}
+.navbarfix figure {
+  grid-column: 1/2;
+  align-items: center;
+  justify-content: center;
+}
+.navbarfix figure img {
+  max-height: 6rem;
+  padding-left: 2rem;
+  margin: 1rem;
+}
+.navbarfix ul {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbarfix ul li {
+  list-style: none;
+  color: #fff;
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.navbarfix ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbarfix ul li::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+.navbarfix ul li:hover {
+  color: black;
+}
+.navbarfix ul li:hover::before {
+  background: linear-gradient(to bottom, #585d64, #697175, #7d8685, #959a97, #adaeab);
+  box-shadow: 0px 3px 20px 0px black;
+  transform: scale(1.2);
+}
+.navbarfix ul:first-of-type {
+  grid-column: 2/3;
+}
+.navbarfix ul:last-of-type {
+  grid-column: 3/4;
+}
+
 html {
   font-size: 14px;
 }
